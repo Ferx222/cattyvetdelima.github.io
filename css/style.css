@@ -1,3 +1,4 @@
+/*-----------------INICIO-----------------*/
 *{
 	padding: 0;
 	margin: 0;
@@ -21,6 +22,12 @@ body{
 	background: var(--bg-color);
 	color: var(--text-color);
 }
+html,body{
+    height: 100%;
+}
+/*=======================================================================*/
+
+/*-----------------INICIO DOCABECALHO-----------------*/
 header{
 	position: fixed;
 	width: 100%;
@@ -34,8 +41,14 @@ header{
 	padding: 22px 15%;
 	border-bottom: 1px solid transparent;
 	transition: all .45s ease;
-	
 }
+header.sticky{
+	background: var(--bg-color);
+	border-bottom: 1px solid #ffffff1a;
+	padding: 12px 15%;
+}
+/*=======================================================================*/
+/*-----------------LOGO DO SITE-----------------*/
 .logo{
 	color: rgb(132, 6, 48);
 	font-size: 35px;
@@ -46,6 +59,8 @@ span{
 	color:hsl(60, 1%, 19%);
 	/*var(--main-color);*/
 }
+/*=======================================================================*/
+/*----------------- INICIO DO MENU-----------------*/
 .navlist{
 	display: flex;
 }
@@ -89,9 +104,9 @@ section h3{
 	align-items: center;
 	justify-content: flex-start;
 }
-.slide{
-	margin-bottom: 20px;
-}
+
+/*=======================================================================*/
+/*-----------------FOTO E TEXTO INICIAL-----------------*/
 .one{
 	display: inline-block;
 	margin-right: 15px;
@@ -130,57 +145,9 @@ section h3{
 	line-height: 1.8;
 	margin-bottom: 40px;
 }
-.button{
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-}
-.btn{
-	display: inline-block;
-	padding: 12px 28px;
-	background: var(--main-color);
-	border-radius: 5px;
-	color: var(--text-color);
-	font-size: 1rem;
-	letter-spacing: 1px;
-	font-weight: 600;
-	transition: all .45s ease;
-}
-.btn:hover{
-	transform: scale(0.9);
-}
-.btn2{
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 15px;
-	font-weight: 600;
-	color: var(--text-color);
-	margin-left: 35px;
-}
-.btn2 span i{
-	height: 55px;
-	width: 55px;
-	background: var(--main-color);
-	color: var(--text-color);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 35px;
-	border-radius: 50%;
-	margin-right: 15px;
-	transition: all .45s ease;
-}
-.btn2 span i:hover{
-	transform: scale(1.1) translateY(5px);
-}
+/*=======================================================================*/
 
-header.sticky{
-	background: var(--bg-color);
-	border-bottom: 1px solid #ffffff1a;
-	padding: 12px 15%;
-}
-
+/*-----------------iNICIO DO SOBRE-----------------*/
 .about{
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -213,9 +180,9 @@ header.sticky{
 	margin-bottom: 4rem;
 }
 
-.services{
-	background: var(--second-bg-color);
-}
+/*=======================================================================*/
+
+/*-----------------MEMORANDO DE FOTOS-----------------*/
 .main-text{
 	text-align: center;
 }
@@ -226,60 +193,8 @@ header.sticky{
 }
 .main-text h2{
 	font-size: var(--h2-font);
-	line-height: 1;
+	line-height: 0.1;
 }
-.services-content{
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-	align-items: center;
-	gap: 2.5rem;
-	margin-top: 5rem;
-}
-.box{
-	background: var(--bg-color);
-	padding: 1px 1px;
-	border-radius: 10px;
-	transition: all .45s ease;
-	margin: 1px 25% 1px;
-}
-.s-icons i{
-	font-size: 32px;
-	margin-bottom: 20px;
-}
-.box h3{
-	font-size: 30px;
-	font-weight: 600;
-	color: var(--text-color);
-	margin-bottom: 15px;
-	
-}
-.box p{
-	color: var(--second-color);
-	font-size: 1rem;
-	line-height: 1.8;
-	margin-bottom: 25px;
-}
-
-.read{
-	display: inline-block;
-	padding: 8px 18px;
-	background: #333333;
-	color: var(--second-color);
-	font-size: 14px;
-	font-weight: 500;
-	border-radius: 8px;
-	transition: all .45s ease;
-}
-.read:hover{
-	letter-spacing: 1px;
-	background: #ffffff99;
-	color: var(--text-color);
-}
-.box:hover{
-	transform: translateY(-8px);
-	cursor: pointer;
-}
-
 .portfolio-content{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(350px, auto));
@@ -298,6 +213,12 @@ header.sticky{
 	border-radius: 8px;
 	display: block;
 	transition: transform 0.5s;
+}
+.row:hover img{ 
+	transform: scale(1.1);
+}
+.row:hover .layer{
+	height: 100%;
 }
 
 .layer{
@@ -339,224 +260,13 @@ header.sticky{
 	justify-content: center;
 	border-radius: 50%;
 }
-.row:hover img{
-	transform: scale(1.1);
-}
-.row:hover .layer{
-	height: 100%;
-}
+/*=======================================================================*/
 
-.contact{
-	background: var(--second-bg-color);
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	align-items: center;
-	gap: 2.5rem;
-}
-.contact-text h4{
-	color: var(--text-color);
-	font-size: 20px;
-	font-weight: 600;
-}
-.contact-text h2{
-	font-size: var(--h2-font);
-	line-height: 1;
-}
-.contact-text p{
-	color: var(--second-color);
-	font-size: var(--p-font);
-	line-height: 1.8;
-	margin-bottom: 30px;
-}
-.list{
-	margin-bottom: 2.8rem;
-}
-.list li{
-	margin-bottom: 12px;
-}
-.list li a{
-	display: block;
-	color: var(--second-color);
-	font-size: 14px;
-	transition: all .45s ease;
-}
-.list li a:hover{
-	color: var(--text-color);
-	transform: translateX(5px);
-}
-.contact-icons i{
-	height: 45px;
-	width: 45px;
-	background: var(--main-color);
-	color: var(--text-color);
-	font-size: 22px;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 8px;
-	margin-right: 15px;
-	transition: all .45s ease;
-}
-.contact-icons i:hover{
-	background: var(--text-color);
-	color: var(--main-color);
-}
-
-.contact-form form{
-	position: relative;
-}
-.contact-form form input,
-form textarea{
-	width: 100%;
-	padding: 14px;
-	background: var(--bg-color);
-	color: var(--text-color);
-	border: none;
-	outline: none;
-	font-size: 15px;
-	border-radius: 8px;
-	margin-bottom: 10px;
-}
-.contact-form textarea{
-	resize: none;
-	height: 240px;
-}
-.contact-form .submit{
-	display: inline-block;
-	font-size: 16px;
-	background: var(--main-color);
-	color: var(--text-color);
-	width: 160px;
-	transition: all .45s ease;
-}
-.contact-form .submit:hover{
-	transform: scale(1.1);
-	cursor: pointer;
-}
-
-.end{
-	padding: 20px 15%;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
-	gap: 2rem;
-	background: var(--bg-color);
-}
-.last-text p{
-	color: var(--second-color);
-	font-size: 14px;
-}
-.top i{
-	padding: 10px;
-	border-radius: 8px;
-	font-size: 15px;
-	color: var(--text-color);
-	background: blue;
-}
-
-/* Estilo para o plugin slick*/
-    .slick-dotted ul{
-        list-style-type: none;
-        text-align: center;
-        position: relative;
-        margin-top: 30px;
-    }
-
-    .slick-dotted li{
-        display: inline-block;
-        margin: 0 7px;
-    }
-
-    .slick-dotted button:focus{
-        outline: 0;
-    }
-
-    .slick-dotted li button{
-        width: 16px;
-        height: 16px;
-        border-radius: 8px;
-        color: #d8d8d8;
-        border-width: 0;
-        background-color: #d8d8d8;
-        opacity: 1;
-        cursor: pointer;
-    }
-
-    li.slick-active button{
-        background-color: #688293;
-        color: #688293;
-    }
-
-    .slick-slide:focu{outline: none;}
-
-
-/* Fim do estilo para o plugin*/
 .clear{
     clear: both;
 }
 
-.container{
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-html,body{
-    height: 100%;
-}
-/*-----------------header do site----------------- */
-
-section.contatos{
-	border: 5px solid rgb(191, 191, 191);
-	text-align: center;
-	font-size: 25px;
-}
-
-/*-----------------skills----------------- */
-section.skills h4{
-	font-size: 35px;
-	color: #ff4d05;
-}
-
-section.skills > .container{
-    padding: 0px 0;
-    max-width: 400px;
-}
-
-section.skills .depoimento-single{
-    text-align: center;
-    width: 100%;
-    padding: 0 2%;
-}
-
-.depoimento-single quote{
-    font-size: 15px;
-    color: #b4b4b4;
-}
-
-.depoimento-single .nome-skills{
-    padding: 19px 0;
-}
-
-.nome-skills img{
-    width: 40px;
-    height: 32px;
-    display: inline-block;
-    border-radius: 16px;
-}
-
-.nome-skills span{
-    position: relative;
-    top: 4px;
-    font-size: 13px;
-    color: #b4b4b4;
-    display: inline-block;
-    margin-top: 5px;
-    vertical-align: top;
-}
-/*---------------------------------------------------*/
-/*-----------------section de Videos----------------- */
+/*-----------------TABELA DE VIDEOS-----------------*/
 section.videos{
     padding: 50px 0;
 }
@@ -577,7 +287,35 @@ section.videos iframe{
     width: 100%;
     height: 100%;
 }
-/*---------------------------------------------------*/
+/*=======================================================================*/
+
+/*-----------------CONTENTE DE CONTATOS----------------- */
+
+section.contatos{
+	border: 5px solid rgb(191, 191, 191);
+	text-align: center;
+	font-size: 25px;
+	justify-content: space-between;
+}
+section a{
+	color: black;
+	font-size: 20px;
+}
+/*=======================================================================*/
+/*-----------------END----------------- */
+.end{
+	padding: 20px 15%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+	background: var(--bg-color);
+}
+.list p{
+	font-size: 13px;
+}
+/*=======================================================================*/
 
 @media (max-width: 1480px){
 	header{
@@ -591,17 +329,19 @@ section.videos iframe{
 	section{
 		padding: 20px 3% 30px;
 	}
+	/* END */
 	.end{
 		padding: 15px 3%;
 	}
+	
 }
 
 @media (max-width: 1100px){
 	:root{
 		--big-font: 4rem;
-	  --h2-font: 2.5rem;
-	  --p-font: 1rem;
-	  transition: .1s;
+		--h2-font: 2.5rem;
+		--p-font: 1rem;
+		transition: .1s;
 	}
 	.home-text h3{
 		font-size: 2.5rem;
@@ -637,7 +377,7 @@ section.videos iframe{
 	}
 }
 
-@media (max-width: 840px){
+@media (max-width: 1000px){
 	#menu-icon{
 		display: block;
 	}
@@ -676,8 +416,6 @@ section.videos iframe{
         float: none;
         width: 65%;
         display: inline-block;
-        /*border: 5px solid white;*/
-        /* background-color: green; */
         padding-top: calc(65% * 0.6);
     }
 
@@ -685,9 +423,7 @@ section.videos iframe{
 @media screen and (max-width: 580px) {
     section.videos .box-video{
         width: 100%;
-        /*border: 5px solid white;*/
-        /* background-color: green; */
-        padding-top: calc(100% * 0.6);
+	    padding-top: calc(100% * 0.6);
     }
 
 }
